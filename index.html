@@ -66,14 +66,17 @@ document.getElementById("main").innerHTML=`
 `;
 }
 function check(){
-var ans=document.getElementById("answer").value;
-if(ans.toLowerCase()=="Cloud Social"){
-agreement();
+  // .trim() removes accidental spaces from the start/end
+  var ans = document.getElementById("answer").value.trim(); 
+  
+  if(ans.toLowerCase() == "cloud social"){
+    agreement();
+  }
+  else {
+    alert("Wrong answer Piyu ");
+  }
 }
-else{
-alert("Wrong answer Piyu ");
-}
-}
+
 function agreement(){
 document.getElementById("main").innerHTML=`
 <h2>Relationship Agreement </h2>
